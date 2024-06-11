@@ -14,3 +14,22 @@ p {
     color: var(--light-primary-text-color);
     font-size: clamp(1.3rem, 1.3vw, 1.5rem);
 }
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        margin: 3rem 0 0.5rem 0;
+        font-size: clamp(1.5rem, 1.8vw, 1.8rem);
+        font-weight: var(--font-weight-light);
+        color: var(--light-primary-color);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    p {
+        margin: 0 1rem;
+        text-align: justify;
+        line-height: 1.7rem;
+        color: var(--light-primary-text-color);
+        font-size: clamp(1.1rem, 1.2vw, 1.8rem);
+    }
+}
