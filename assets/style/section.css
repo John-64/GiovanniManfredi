@@ -10,9 +10,10 @@ h1 {
 p {
     margin: 0 1rem;
     text-align: justify;
-    line-height: 2rem;
     color: var(--light-primary-text-color);
-    font-size: clamp(1.3rem, 1.3vw, 1.5rem);
+    line-height: clamp(25px, 3.5vw, 45px);
+    font-size: clamp(18px, 1.8vw, 25px);
+    font-weight: var(--font-weight-light);
 }
 
 @media only screen and (max-width: 768px) {
