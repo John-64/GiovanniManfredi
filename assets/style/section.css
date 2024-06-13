@@ -1,67 +1,3 @@
-/* @keyframes highlight-animation {
-    0% {
-        background-size: 0 100%;
-    }
-    100% {
-        background-size: 100% 100%;
-    }
-}
-
-.highlight--yellow {
-    background: linear-gradient(to right, rgba(255, 249, 165, 0.3) 0%, rgba(255, 249, 165, 0.3) 100%);
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    border-radius: 15px;
-    padding: 0 0.3rem;
-    margin: 0 -0.3rem;
-    animation: highlight-animation 4s ease-in-out forwards;
-}
-
-.highlight--blue {
-    background: linear-gradient(to right, rgba(122, 158, 255, 0.3) 0%, rgba(122, 158, 255, 0.3) 100%);
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    border-radius: 15px;
-    padding: 0 0.3rem;
-    margin: 0 -0.3rem;
-    animation: highlight-animation 4s ease-in-out forwards;
-}
-
-.highlight--pink {
-    background: linear-gradient(to right, rgba(255, 165, 212, 0.3) 0%, rgba(255, 165, 212, 0.3) 100%);
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    border-radius: 15px;
-    padding: 0 0.3rem;
-    margin: 0 -0.3rem;
-    animation: highlight-animation 4s ease-in-out forwards;
-}
-
-.highlight--red {
-    background: linear-gradient(to right, rgba(255, 115, 115, 0.3) 0%, rgba(255, 115, 115, 0.3) 100%);
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    border-radius: 15px;
-    padding: 0 0.3rem;
-    margin: 0 -0.3rem;
-    animation: highlight-animation 4s ease-in-out forwards;
-}
-
-.highlight--green {
-    background: linear-gradient(to right, rgba(115, 255, 117, 0.3) 0%, rgba(115, 255, 117, 0.3) 100%);
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    border-radius: 15px;
-    padding: 0 0.3rem;
-    margin: 0 -0.3rem;
-    animation: highlight-animation 4s ease-in-out forwards;
-} */
-
 @keyframes highlight-animation {
     0% {
         background-size: 0 100%;
@@ -122,6 +58,7 @@
 }
 
 .highlight.active {
+    box-decoration-break: clone;
     animation: highlight-animation 2s ease-in-out forwards;
 }
 
