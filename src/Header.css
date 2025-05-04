@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@keyframes available-animation {
+    0% {
+      width: 14px;
+      height: 14px;
+    }
+    100% {
+      width: 26px;
+      height: 26px;
+    }
+}
+  
+.animate-available {
+animation: available-animation 1s ease-in-out infinite alternate;
+}
+  

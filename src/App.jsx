@@ -1,12 +1,17 @@
 import './App.css'
+import './index.css'
+import Header from './Header'
+import ChiSono from './ChiSono'
 
 function App() {
   return (
     <>
-      <div className='bg-red-500'>
-        Ciao
-      </div>
-      
+      <Header />
+      <main>
+        <div className="h-10"></div>
+        <ChiSono />
+      </main>
+      <div className="h-200"></div>
     </>
   )
 }
