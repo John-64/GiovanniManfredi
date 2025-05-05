@@ -1,5 +1,6 @@
 import './ChiSono.css'
 import './index.css'
+import pattern from './assets/pattern.png';
 
 function ChiSono() {
   return (
@@ -8,7 +9,7 @@ function ChiSono() {
         md:[grid-template-areas:'info_avatar''more-info_more-info']
         lg:[grid-template-areas:'info_avatar''more-info_avatar']
       ">
-        <div className="absolute inset-0 rounded-xl opacity-5 bg-[url('./pattern.png')] bg-repeat" />
+        <div className="absolute inset-0 rounded-xl opacity-5 bg-repeat" style={{ backgroundImage: `url(${pattern})` }}/>
         {/* Info */}
         <div className="[grid-area:info] flex flex-col justify-end gap-1 text-start">
           <p className="text-text text-lg font-light">Ciao, io sono</p>
