@@ -4,60 +4,85 @@ import { useState } from "react";
 
 function Header() {
   const [active, setActive] = useState("Chi sono");
-  const items = ["Chi sono", "Competenze", "Progetti", "Studio"];
+  const [hovered, setHovered] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const items = ["Chi sono", "Competenze", "Progetti", "Studio", "Contattami"];
 
   const handleClick = (item) => {
     setActive(item);
-    // Se vuoi scrollare, puoi usare un ref o id per ogni sezione
+    setIsMenuOpen(false);
     const el = document.getElementById(item.replace(/\s+/g, "-").toLowerCase());
     if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+  };  
 
   return (
-    <header className="
-      sticky top-0 w-full md:h-[50px] grid px-5
-      [grid-template-areas:'logo_nav_contact-me']
-      md:[grid-template-columns:1fr_3fr_1fr] 
-      [grid-template-rows:100%] 
-      z-10 shadow-md
-      bg-white 
-      text-white 
-    ">
-      <div className="h-full [grid-area:logo] flex justify-start items-center gap-2">
+    <header className="flex justify-between items-center sticky top-0 w-auto px-5 z-10 h-[30px] md:h-[40px] lg:h-[50px] shadow-md bg-white text-white">
+      {/* Me */}
+      <div className="h-full w-auto flex justify-start items-center gap-2">
         <img src="./me.jpg" alt="Logo" className='h-2/3 rounded-full' />
-        <span className='text-text md:text-sm lg:text-xl font-light'>Giovanni Manfredi</span>
+        <span className='w-min text-nowrap text-text font-light text-sm md:text-md lg:text-lg'>Giovanni Manfredi</span>
         <div className="flex justify-center items-center relative w-6 h-6">
           <div className="w-4 h-4 rounded-full bg-green-700 z-10"></div>
           <div className="absolute rounded-full bg-green-700/30 animate-available z-0"></div>
         </div>
       </div>
 
-      <nav className="h-full z-0 [grid-area:nav] flex justify-center items-center text-primary">
-        <ul className="flex justify-center items-center list-none gap-5 group">
+      {/* Navigation */}
+      <nav className="h-full z-0 justify-center items-center text-primary [display:none] sm:flex">
+        <ul className="flex justify-center items-center list-none gap-5 group lowercase font-semibold text-sm md:text-md lg:text-lg">
           {items.map((item) => (
-            <li
+            <span
               key={item}
               onClick={() => handleClick(item)}
+              onMouseEnter={() => setHovered(item)}
+              onMouseLeave={() => setHovered(null)}
               className={`
-                px-4 py-1 rounded-full uppercase text-sm font-semibold transition-all duration-100 shadow-button
-                ${active === item ? "scale-110 border-2 border-primary bg-primary text-background" : ""}
-                hover:cursor-pointer hover:scale-110 hover:border-2 hover:border-primary`}
+                transition-all duration-100 hover:cursor-pointer hover:border-b-2 hover:border-primary
+                ${hovered
+                  ? hovered === item
+                    ? "text-primary"
+                    : "text-text"
+                  : active === item
+                    ? "text-primary"
+                    : "text-text"
+                }
+              `}
             >
               {item}
-            </li>
+            </span>
           ))}
         </ul>
       </nav>
-      
-      <div className="h-full [grid-area:contact-me] flex justify-end items-center">
-        <a
-          className="flex items-center rounded-full gap-2 px-4 py-1 text-sm text-primary shadow-button font-bold hover:scale-110 border-2 border-background transition-all duration-100 hover:border-primary hover:bg-primary hover:text-background"
-          href="mailto:manfredi2000@hotmail.it"
-        >
-          <span className="material-symbols-outlined">mail</span>
-          <p className="m-0 uppercase">Scrivimi</p>
-        </a>
+
+      {/* Hamburger menu */}
+      <button
+        className="sm:hidden flex justify-center items-center h-full text-primary cursor-pointer"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <span className="material-symbols-outlined">{isMenuOpen ? "close" : "menu"}</span>
+      </button>
+      <div
+        className={`
+          absolute top-[100%] left-0 w-full bg-white shadow-md flex flex-col items-start px-4 py-2 sm:hidden z-20
+          transform transition-all linear
+          ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}
+        `}
+      >
+        {items.map((item) => (
+          <span
+            key={item}
+            onClick={() => handleClick(item)}
+            className={`
+              w-full py-0.5 lowercase font-semibold text-md flex justify-center items-center
+              ${active === item ? "text-primary" : "text-text"}
+            `}
+          >
+            <div className='cursor-pointer'>{item}</div>
+          </span>
+        ))}
       </div>
+
+
     </header>
   )
 }

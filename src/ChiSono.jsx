@@ -1,46 +1,12 @@
 import './ChiSono.css'
 import './index.css'
-import pattern from './assets/pattern.png';
 
 function ChiSono() {
   return (
-    <div className="w-full justify-center items-center card-animation">
-      <div className="relative grid gap-6 w-full px-12 rounded-xl shadow-[0_0_10px_#C1C1C1] card bg-white
-        md:[grid-template-areas:'info_avatar''more-info_more-info']
-        lg:[grid-template-areas:'info_avatar''more-info_avatar']
-      ">
-        <div className="absolute inset-0 rounded-xl opacity-5 bg-repeat" style={{ backgroundImage: `url(${pattern})` }}/>
-        {/* Info */}
-        <div className="[grid-area:info] flex flex-col justify-end gap-1 text-start">
-          <p className="text-text text-lg font-light">Ciao, io sono</p>
-          <div className="text-3xl md:text-3xl font-semibold text-card-name">Giovanni Manfredi</div>
-          <div className="text-primary text-base font-light">Dottore in Informatica</div>
-        </div>
-
-        {/* Avatar */}
-        <div className="[grid-area:avatar] flex md:justify-end items-center h-full">
-          <img
-            src="./avatar.png"
-            alt="Foto di Giovanni Manfredi"
-            className="rounded-full border border-card-avatar h-4/5 object-cover"
-          />
-        </div>
-
-        {/* Altre info */}
-        <div className="[grid-area:more-info] flex justify-start items-start gap-4 col-span-full mt-4">
-          <div className="flex flex-col items-center justify-center md:w-20 md:h-20 z-1 bg-background border border-[#C1C1C1] rounded-md">
-            <div className="uppercase text-primary text-l font-medium">Anni</div>
-            <div className="text-2xl font-light text-text">24</div>
-          </div>
-          <div className="flex flex-col items-center justify-center md:w-20 md:h-20 z-1 bg-background border border-[#C1C1C1] rounded-md">
-            <div className="uppercase text-primary text-l font-medium">Laurea</div>
-            <div className="text-2xl font-light text-text">110L</div>
-          </div>
-          <div className="flex flex-col items-center justify-center md:w-45 md:h-20 z-1 bg-background border border-[#C1C1C1] rounded-md">
-            <div className="uppercase text-primary text-l font-medium">Dove mi trovo</div>
-            <div className="text-2xl font-light text-text">Foggia, Italia</div>
-          </div>
-        </div>
+    <div className='w-full'>
+      <h1 className='uppercase text-center text-primary font-light md:text-2xl'>Chi sono</h1>
+      <div className='mt-2 text-justify text-text font-light md:text-2xl leading-loose'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore in alias nihil rem! Est illum id laborum ipsam magni omnis magnam soluta culpa. Ad, recusandae laudantium, doloremque labore repellat et ducimus atque asperiores quisquam ex nobis aut ipsa voluptates quae accusamus expedita, laborum consequuntur saepe tempore illo! Vitae, harum aliquid. Possimus eius maxime eum molestiae consequuntur, necessitatibus temporibus. Neque labore nemo at modi consectetur eaque laborum quibusdam soluta deserunt veritatis exercitationem voluptas consequatur dolores vel dolorum doloremque quis, id repellat! Architecto voluptatem iste cumque quam ab dolor! Voluptatum voluptate dignissimos blanditiis vitae, sequi, fugiat quam ad sed corporis amet atque quidem nam illo repellendus nihil, quasi totam odit laudantium fugit ut vel hic? Minus consectetur eos, iste saepe beatae, enim ipsam aliquam alias quia tenetur voluptates quae suscipit quas autem exercitationem dignissimos quisquam modi sunt est veniam ex iusto rem. Ipsa, repellendus ipsum! Asperiores repellat dicta, exercitationem dolorum, similique odio, vero natus suscipit dolorem dolores a! Corrupti aspernatur molestias tempore, harum obcaecati error autem deleniti eum at nobis ad dolorum ducimus enim ipsam, labore, pariatur molestiae nisi quidem cupiditate magni excepturi temporibus ab maiores! Accusamus expedita doloremque fuga nesciunt temporibus alias, eveniet soluta consectetur nemo voluptatum ullam. Natus, ducimus adipisci.
       </div>
     </div>
   )

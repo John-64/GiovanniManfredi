@@ -25,7 +25,23 @@
   box-shadow: 0 0 8px #c1c1c1;
 }
 
-main {
-  padding-left: 6rem;
-  padding-right: 6rem;
+@media only screen and (min-width: 769px) {
+  main {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  main {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

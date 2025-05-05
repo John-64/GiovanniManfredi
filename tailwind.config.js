@@ -3,6 +3,9 @@ export default {
   content: [],
   theme: {
     extend: {},
+    screens: {
+      xs: '320px',
+    }
   },
   plugins: [],
 }

@@ -1,6 +1,7 @@
 import './App.css'
 import './index.css'
 import Header from './Header'
+import Card from './Card'
 import ChiSono from './ChiSono'
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
     <>
       <Header />
       <main>
+        <div className="h-10"></div>
+        <Card />
         <div className="h-10"></div>
         <ChiSono />
       </main>
