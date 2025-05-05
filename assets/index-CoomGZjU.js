@@ -56,7 +56,7 @@ Error generating stack: `+u.message+`
         `,children:cl.map(_=>B.jsx("span",{onClick:()=>Tl(_),className:`
               w-full py-0.5 lowercase font-semibold text-md flex justify-center items-center
               ${U===_?"text-primary":"text-text"}
-            `,children:B.jsx("div",{className:"cursor-pointer",children:_})},_))})]})}const Xy="/GiovanniManfredi/assets/pattern-1q7MLbUC.png";function Qy(){return B.jsx("div",{className:"w-full justify-center items-center card-animation",children:B.jsxs("div",{className:`relative grid w-full px-12 py-6 rounded-xl shadow-[0_0_10px_#C1C1C1] bg-white h-auto
+            `,children:B.jsx("div",{className:"cursor-pointer",children:_})},_))})]})}const Xy="/assets/pattern-1q7MLbUC.png";function Qy(){return B.jsx("div",{className:"w-full justify-center items-center card-animation",children:B.jsxs("div",{className:`relative grid w-full px-12 py-6 rounded-xl shadow-[0_0_10px_#C1C1C1] bg-white h-auto
         [grid-template-areas:'avatar''info''more-info']
         lg:[grid-template-areas:'info_avatar''more-info_avatar']
       `,children:[B.jsx("div",{className:"absolute inset-0 rounded-xl z-0 opacity-5 bg-repeat",style:{backgroundImage:`url(${Xy})`}}),B.jsxs("div",{className:`[grid-area:info] flex flex-col z-10 mt-4 lg:mt-0
