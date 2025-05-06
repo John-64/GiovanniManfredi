@@ -2,8 +2,7 @@ import './Header.css'
 import './index.css'
 import { useState } from "react";
 
-function Header() {
-  const [active, setActive] = useState("Chi sono");
+function Header({ active, setActive }) {
   const [hovered, setHovered] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const items = ["Chi sono", "Competenze", "Progetti", "Studio", "Contattami"];
@@ -29,30 +28,30 @@ function Header() {
 
       {/* Navigation */}
       <nav className="h-full z-0 justify-center items-center text-primary [display:none] sm:flex">
-        <ul className="flex justify-center items-center list-none gap-5 group lowercase font-semibold text-sm md:text-md lg:text-lg">
-          {items.map((item) => (
-            <span
-              key={item}
-              onClick={() => handleClick(item)}
-              onMouseEnter={() => setHovered(item)}
-              onMouseLeave={() => setHovered(null)}
-              className={`
-                transition-all duration-100 hover:cursor-pointer hover:border-b-2 hover:border-primary
-                ${hovered
-                  ? hovered === item
-                    ? "text-primary"
-                    : "text-text"
-                  : active === item
-                    ? "text-primary"
-                    : "text-text"
-                }
-              `}
-            >
-              {item}
-            </span>
-          ))}
-        </ul>
-      </nav>
+      <ul className="flex justify-center items-center list-none gap-5 group lowercase font-semibold text-sm md:text-md lg:text-lg">
+        {items.map((item) => (
+          <span
+            key={item}
+            onClick={() => handleClick(item)}
+            onMouseEnter={() => setHovered(item)}
+            onMouseLeave={() => setHovered(null)}
+            className={`
+              transition-all duration-100 hover:cursor-pointer hover:border-b-2 hover:border-primary
+              ${hovered
+                ? hovered === item
+                  ? "text-primary"
+                  : "text-text"
+                : active === item
+                  ? "text-primary"
+                  : "text-text"
+              }
+            `}
+          >
+            {item}
+          </span>
+        ))}
+      </ul>
+    </nav>
 
       {/* Hamburger menu */}
       <button

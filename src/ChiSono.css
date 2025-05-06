@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@keyframes waveAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 100%;
+    }
+    50% {
+        background-position: 0% 0%;
+    }
+    75% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.background-card {
+    padding-left: 40%;
+    z-index: -1;
+    background-image: linear-gradient(-90deg, hsl(207, 75%, 44%, 1) 0%, hsla(0, 100%, 50%, 0.2) 100%);
+    background-size: 200% 200%;
+    animation: waveAnimation 10s linear infinite;
+}
