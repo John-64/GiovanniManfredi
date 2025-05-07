@@ -19,7 +19,7 @@ function Card() {
             text-md
             lg:text-lg
           ">Ciao, io sono</p>
-          <div className="text-3xl font-semibold text-card-name 
+          <div className="font-semibold text-card-name 
             text-xl 
             md:text-2xl 
             lg:text-3xl
