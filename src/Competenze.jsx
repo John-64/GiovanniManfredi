@@ -1,21 +1,30 @@
 import './Competenze.css'
 import './index.css'
 import { useState, useEffect } from 'react';
+import html from './assets/competenze/html.png';
+import css from './assets/competenze/css.png';
+import js from './assets/competenze/js.png';
+import ts from './assets/competenze/ts.png';
+import angular from './assets/competenze/angular.png';
+import tailwind from './assets/competenze/tailwind.svg';
+import react from './assets/competenze/react.png';
+import java from './assets/competenze/java.png';
+import python from './assets/competenze/python.png';
 import HighlightText from './HighlightText.jsx';
 
 function Competenze() {
   const [animatedFramework, setAnimatedFramework] = useState(null);
   
   const frameworks = [
-    { name: 'HTML', image: '/src/assets/competenze/html.png' },
-    { name: 'CSS', image: '/src/assets/competenze/css.png' },
-    { name: 'JS', image: '/src/assets/competenze/js.png' },
-    { name: 'TS', image: '/src/assets/competenze/ts.png' },
-    { name: 'ANGULAR', image: '/src/assets/competenze/angular.png' },
-    { name: 'TAILWIND', image: '/src/assets/competenze/tailwind.svg' },
-    { name: 'REACT', image: '/src/assets/competenze/react.png' },
-    { name: 'JAVA', image: '/src/assets/competenze/java.png' },
-    { name: 'PYTHON', image: '/src/assets/competenze/python.png' },
+    { name: 'HTML', image: html },
+    { name: 'CSS', image: css},
+    { name: 'JS', image: js },
+    { name: 'TS', image: ts },
+    { name: 'ANGULAR', image: angular },
+    { name: 'TAILWIND', image: tailwind },
+    { name: 'REACT', image: react },
+    { name: 'JAVA', image: java },
+    { name: 'PYTHON', image: python },
   ];
 
   useEffect(() => {
