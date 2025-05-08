@@ -33,6 +33,7 @@ const HighlightText = ({ children, color = 'yellow' }) => {
       case 'purple': return 'bg-purple-300/30';
       case 'red': return 'bg-red-200/30';
       case 'green': return 'bg-green-200/30';
+      case 'orange': return 'bg-orange-500/20';
       default: return 'bg-yellow-100/40';
     }
   };
