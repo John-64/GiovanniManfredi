@@ -93,7 +93,7 @@ function Contattami() {
                 </div>
               </div>
             </div>
-            <div className={`absolute bg-primary text-background text-center left-17 py-2 px-4 z-30 rounded-md transition-all duration-700 flex items-center justify-center gap-2
+            <div className={`absolute bg-primary text-background text-center left-[22%] py-2 px-4 z-30 rounded-md transition-all duration-700 flex items-center justify-center gap-2
               ${isVisible ? 'opacity-100 top-2' : 'opacity-0 top-20'}`}>
                 <Mail size={16} />
                 <span className="text-sm">manfredi2000@hotmail.it</span>
