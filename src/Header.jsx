@@ -5,7 +5,7 @@ import { useState } from "react";
 function Header({ active, setActive }) {
   const [hovered, setHovered] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const items = ["Chi sono", "Competenze", "Progetti", "Studio", "Contattami"];
+  const items = ["Chi sono", "Competenze", "Progetti", "Studio", "Libreria", "Contattami"];
 
   const handleClick = (item) => {
     setActive(item);
@@ -15,7 +15,7 @@ function Header({ active, setActive }) {
   };  
 
   return (
-    <header className="flex justify-between items-center sticky top-0 w-auto px-5 z-10 h-[30px] md:h-[40px] lg:h-[50px] shadow-md bg-white text-white">
+    <header className="flex justify-between items-center sticky top-0 w-auto px-5 z-10 h-[25px] sm:h-[30px] md:h-[35px] lg:h-[45px] shadow-md bg-white text-white">
       {/* Me */}
       <div className="h-full w-auto flex justify-start items-center gap-2">
         <img src="./me.jpg" alt="Logo" className='h-2/3 rounded-full' />
@@ -28,7 +28,9 @@ function Header({ active, setActive }) {
 
       {/* Navigation */}
       <nav className="h-full z-0 justify-center items-center text-primary [display:none] sm:flex">
-      <ul className="flex justify-center items-center list-none gap-5 group lowercase font-semibold text-sm md:text-md lg:text-lg">
+      <ul className="flex justify-center items-center list-none gap-5 group lowercase font-semibold 
+        text-xs md:text-lg
+      ">
         {items.map((item) => (
           <span
             key={item}

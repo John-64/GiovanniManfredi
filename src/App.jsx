@@ -6,6 +6,7 @@ import ChiSono from './ChiSono'
 import Competenze from './Competenze'
 import Progetti from './Progetti'
 import Studio from './Studio'
+import Libreria from './Libreria'
 import Contattami from './Contattami'
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -16,6 +17,7 @@ function App() {
   const competenzeRef = useRef();
   const progettiRef = useRef();
   const studioRef = useRef();
+  const libreriaRef = useRef();
   const contattamiRef = useRef();
 
   const sections = useMemo(() => [
@@ -23,6 +25,7 @@ function App() {
     { id: "competenze", ref: competenzeRef },
     { id: "progetti", ref: progettiRef },
     { id: "studio", ref: studioRef },
+    { id: "libreria", ref: libreriaRef },
     { id: "contattami", ref: contattamiRef },
   ], []);
 
@@ -163,6 +166,16 @@ function App() {
           className="scroll-mt-[30px] md:scroll-mt-[40px] lg:scroll-mt-[50px]"
         >
           <Studio />
+        </section>
+
+        <div className="h-10"></div>
+
+        <section
+          id="libreria"
+          ref={libreriaRef}
+          className="scroll-mt-[30px] md:scroll-mt-[40px] lg:scroll-mt-[50px]"
+        >
+          <Libreria />
         </section>
 
         <div className="h-10"></div>

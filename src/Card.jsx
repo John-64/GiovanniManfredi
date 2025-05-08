@@ -54,7 +54,7 @@ function Card() {
             md:w-20 md:h-20
           ">
             <div className="uppercase text-primary font-semibold text-xs sm:text-md md:text-lg">Anni</div>
-            <div className="font-light text-text text-ms sm:text-xl ">24</div>
+            <div className="font-light text-text text-ms sm:text-xl ">25</div>
           </div>
           <div className="[grid-area:laurea] flex flex-col items-center justify-center z-1 bg-background border border-[#C1C1C1] rounded-md
             w-full h-12
