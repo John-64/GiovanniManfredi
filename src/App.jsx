@@ -187,8 +187,6 @@ function App() {
         >
           <Contattami />
         </section>
-
-        <div className="h-10"></div>
       </main>
     </>
   );

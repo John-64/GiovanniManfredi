@@ -15,7 +15,7 @@ function Header({ active, setActive }) {
   };  
 
   return (
-    <header className="flex justify-between items-center sticky top-0 w-auto px-5 z-10 h-[25px] sm:h-[30px] md:h-[35px] lg:h-[45px] shadow-md bg-white text-white">
+    <header className="flex justify-between items-center sticky top-0 w-auto px-5 z-100 h-[25px] sm:h-[30px] md:h-[35px] lg:h-[45px] shadow-md bg-white text-white">
       {/* Me */}
       <div className="h-full w-auto flex justify-start items-center gap-2">
         <img src="./me.jpg" alt="Logo" className='h-2/3 rounded-full' />

@@ -5,7 +5,7 @@ import { Mail } from 'lucide-react';
 import bollo from './assets/marcaDaBollo.png';
 
 function Contattami() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const letterRef = useRef(null);
   
   useEffect(() => {
@@ -43,61 +43,47 @@ function Contattami() {
         <p>
           Per qualsiasi domanda o informazione, non esitare a contattarmi, sarà un piacere risponderti! Clicca sulla lettera per mandarmi una mail!
         </p>
-        <div className="flex justify-center mt-6">
-          <div 
-            className="relative cursor-pointer transition-all duration-500 hover:scale-105"
-            ref={letterRef}
-          >
-            <a
-              href="mailto:manfredi2000@hotmail.it"
-            >
-            {/* Envelope container */}
-            <div className={`relative w-60 h-40 sm:w-72 sm:h-48`}>
-              {/* Envelope body - the main envelope */}
-              <div className="absolute inset-0 bg-text/05 border-2 border-text/30 rounded-md shadow-md overflow-hidden">
-                
-                {/* Envelope back side with fold lines */}
-                <div className="absolute inset-0">
-                  {/* Center fold line */}
-                  <div className="absolute top-1/2 left-0 right-0 h-px bg-text/30"></div>
-                  
-                  {/* Diagonal fold lines */}
-                  <div className="absolute top-0 left-0 w-1/2 h-1/2 border-r border-b border-text/30 transform -rotate-45 origin-bottom-right"></div>
-                  <div className="absolute top-0 right-0 w-1/2 h-1/2 border-l border-b border-text/30 transform rotate-45 origin-bottom-left"></div>
-                </div>
-                
-                {/* Envelope flap that opens */}
-                <div 
-                  className={`absolute top-0 left-0 w-full h-1/2 bg-gray-100 border-b border-text origin-bottom transition-transform duration-1000 ease-in-out z-20
-                  ${isVisible ? 'transform translate-y-2 rotate-x-160' : 'transform rotate-x-0'}`}
-                  style={{
-                    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 50% 60%, 0 100%)'
-                  }}
-                >
-                  {/* Bollo */}
-                  <div className="absolute top-2 right-2 w-13 h-13" style={{ backgroundImage: `url(${bollo})`, backgroundPosition: 'center', backgroundSize: 'cover' }}></div>
-                </div>
-                
-                {/* Letter inside */}
-                <div 
-                  className={`absolute top-4 left-4 right-4 bottom-4 bg-white rounded shadow-sm transition-transform duration-1000 ease-in-out z-10
-                  ${isVisible ? 'transform -translate-y-8' : ''}`}
-                >
-                  <div className="h-full flex flex-col justify-center p-3">
-                    <div className="h-2 w-full bg-gray-200 rounded mb-2"></div>
-                    <div className="h-2 w-4/5 bg-gray-200 rounded mb-2"></div>
-                    <div className="h-2 w-full bg-gray-200 rounded mb-2"></div>
-                    <div className="h-2 w-3/4 bg-gray-200 rounded mb-2"></div>
-                    <div className="h-2 w-2/3 bg-gray-200 rounded"></div>
+      
+        <div className="flex justify-center relative mb-30">
+          <div className="relative w-46 h-30 sm:w-56 sm:h-37 md:w-64 md:h-42 lg:w-72 lg:h-48 top-15 border-2 border-gray-200 rounded-md shadow-lg cursor-pointer transition-all duration-500 hover:scale-105" 
+                ref={letterRef}>
+            <a href="mailto:manfredi2000@hotmail.it">
+              <div className="absolute z-60 bottom-2 w-8 h-8 right-2 sm:w-13 sm:h-13" style={{ backgroundImage: `url(${bollo})`, backgroundPosition: 'center', backgroundSize: 'cover' }}></div>
+              <div className={`absolute rounded-md w-full h-full bg-gray-100 ease-in-out z-23 origin-top 
+                ${isVisible ? 'transform rotate-x-140 bottom-0 border-none duration-500' : 'transform rotate-x-0 bottom-0 delay-300 duration-600'}`}
+                style={{
+                  clipPath: 'polygon(100% 0,0 0,50% 50%)'
+              }} ></div>
+      
+              <div className={`relative overflow-hidden rounded-sm w-full h-full bottom-0 bg-gray-100 origin-top transition-transform duration-1000 ease-in-out z-30`}
+              style={{
+                clipPath: 'polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 0)'
+              }} >
+                <div className="absolute transform z-50 top-0 bg-gray-200 origin-top-left left-0 w-0.5 -rotate-56 h-[108px] sm:h-[133px] md:h-[152px] lg:h-[171px]"></div>
+                <div className="absolute transform z-50 top-0 bg-gray-200 origin-top-right right-0 w-0.5 rotate-56 h-[108px] sm:h-[133px] md:h-[152px] lg:h-[171px]"></div>
+                <div className="absolute transform z-50 bottom-0 bg-gray-200 origin-bottom-left left-0 w-0.5 h-[171px] rotate-50"></div>
+                <div className="absolute transform z-50 bottom-0 bg-gray-200 origin-bottom-right right-0 w-0.5 h-[171px] -rotate-50"></div>
+              </div>
+
+              <div 
+                className={`absolute left-4 right-4 bottom-6 sm:bottom-8 md:bottom-10 h-3/4 bg-white rounded shadow-sm transition-all ease-in-out
+                ${isVisible ? 'transform -translate-y-10 md:-translate-y-8 z-24 duration-1200' : 'z-22 duration-400'}`}
+              >
+                <div className="relative h-full flex flex-col justify-center p-3">
+                  <div className="h-2 w-full bg-gray-200 rounded mb-2"></div>
+                  <div className="h-2 w-4/5 bg-gray-200 rounded mb-2"></div>
+                  <div className="h-2 w-full bg-gray-200 rounded mb-2"></div>
+                  <div className="h-2 w-3/4 bg-gray-200 rounded mb-2"></div>
+                  <div className="h-2 w-2/3 bg-gray-200 rounded"></div>
+
+                  <div className={`absolute left-1/2 transform -translate-x-1/2 scale-70 sm:scale-85 md:scale-95 bg-primary text-background text-center py-2 px-4 z-30 rounded-md transition-all duration-700 flex items-center justify-center gap-2
+                  ${isVisible ? 'top-2' : 'top-5'}`}>
+                    <Mail size={16} />
+                    <span className="text-sm">manfredi2000@hotmail.it</span>
                   </div>
                 </div>
+                
               </div>
-            </div>
-            <div className={`absolute bg-primary text-background text-center left-[22%] py-2 px-4 z-30 rounded-md transition-all duration-700 flex items-center justify-center gap-2
-              ${isVisible ? 'opacity-100 top-2' : 'opacity-0 top-20'}`}>
-                <Mail size={16} />
-                <span className="text-sm">manfredi2000@hotmail.it</span>
-            </div>
             </a>
           </div>
         </div>
