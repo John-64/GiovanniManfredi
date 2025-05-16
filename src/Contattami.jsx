@@ -38,20 +38,21 @@ function Contattami() {
   return (
     <div className="w-full">
       <h1 className='uppercase text-center text-primary font-light md:text-2xl'>Altro</h1>
-      <form name="contact" netlify>
+      <form name="contattami" method="POST" data-netlify="true" className='flex flex-col gap-2 justify-center items-center'>
         <p>
-          <label>Name <input className='border' type="text" name="name" /></label>
+          <label>Your Name: <input type="text" name="name" className='border'/></label>
         </p>
         <p>
-          <label>Email <input className='border' type="email" name="email" /></label>
+          <label>Your Email: <input type="email" name="email" className='border'/></label>
         </p>
         <p>
-          <label>Text <input className='border' type="text" name="description" /></label>
+          <label>Message: <textarea name="message" className='border'></textarea></label>
         </p>
         <p>
-          <button type="submit" className='bg-primary text-white py-2 px-4'>Send</button>
+          <button type="submit" className='bg-primary text-background px-4 py-1'>Send</button>
         </p>
-      </form>
+        </form>
+
       <div className="mt-2 text-justify text-text font-light md:text-2xl
       leading-8 sm:leading-9 md:leading-10 lg:leading-12">
         <p>
