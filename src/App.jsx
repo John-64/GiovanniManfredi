@@ -1,5 +1,6 @@
 import './App.css'
 import './index.css'
+import React from 'react'
 import Header from './Header'
 import Card from './Card'
 import ChiSono from './ChiSono'
@@ -26,7 +27,7 @@ function App() {
     { id: "progetti", ref: progettiRef },
     { id: "studio", ref: studioRef },
     { id: "libreria", ref: libreriaRef },
-    { id: "contattami", ref: contattamiRef },
+    { id: "altro", ref: contattamiRef },
   ], []);
 
   useEffect(() => {
@@ -181,7 +182,7 @@ function App() {
         <div className="h-10"></div>
 
         <section
-          id="contattami"
+          id="altro"
           ref={contattamiRef}
           className="scroll-mt-[30px] md:scroll-mt-[40px] lg:scroll-mt-[50px]"
         >

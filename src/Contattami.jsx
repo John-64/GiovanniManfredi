@@ -37,7 +37,21 @@ function Contattami() {
 
   return (
     <div className="w-full">
-      <h1 className='uppercase text-center text-primary font-light md:text-2xl'>Contattami</h1>
+      <h1 className='uppercase text-center text-primary font-light md:text-2xl'>Altro</h1>
+      <form name="contact" netlify>
+        <p>
+          <label>Name <input className='border' type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Email <input className='border' type="email" name="email" /></label>
+        </p>
+        <p>
+          <label>Text <input className='border' type="text" name="description" /></label>
+        </p>
+        <p>
+          <button type="submit" className='bg-primary text-white py-2 px-4'>Send</button>
+        </p>
+      </form>
       <div className="mt-2 text-justify text-text font-light md:text-2xl
       leading-8 sm:leading-9 md:leading-10 lg:leading-12">
         <p>
