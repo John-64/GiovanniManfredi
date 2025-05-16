@@ -39,27 +39,27 @@ function Contattami() {
     <div className="w-full">
       <h1 className='uppercase text-center text-primary font-light md:text-2xl'>AltroE</h1>
       <form
-  name="contact"
-  method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
-  className="flex flex-col gap-2 justify-center items-center"
->
-  <input type="hidden" name="form-name" value="contact" />
-  <input type="hidden" name="bot-field" />
-  <p>
-    <label>Your Name: <input type="text" name="name" className="border" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" className="border" /></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message" className="border"></textarea></label>
-  </p>
-  <p>
-    <button type="submit" className="bg-primary text-background px-4 py-1">Send</button>
-  </p>
-</form>
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        className="flex flex-col gap-2 justify-center items-center"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
+        <p>
+          <label>Your Name: <input type="text" name="name" className="border" /></label>
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" className="border" /></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message" className="border"></textarea></label>
+        </p>
+        <p>
+          <button type="submit" className="bg-primary text-background px-4 py-1">Send</button>
+        </p>
+      </form>
 
 
 
