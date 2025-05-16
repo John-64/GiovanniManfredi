@@ -38,7 +38,7 @@ function Contattami() {
   return (
     <div className="w-full">
       <h1 className='uppercase text-center text-primary font-light md:text-2xl'>Altro</h1>
-      <form name="contattami" method="POST" data-netlify="true" className='flex flex-col gap-2 justify-center items-center'>
+      <form name="contact" data-netlify="true" className='flex flex-col gap-2 justify-center items-center'>
         <p>
           <label>Your Name: <input type="text" name="name" className='border'/></label>
         </p>
